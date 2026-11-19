@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- NAVIGATION -->
+  <header>
+    <div class="logo">
+      <img src="IMG_8932.jpeg" alt="Heels & Cleats logga">
+      <h2>HEELS &<br>CLEATS</h2>
+    </div>
+
+    <nav>
+      <a href="nyfil.html">Hem</a>
+      <a href="nyfil2.html">Podden</a>
+      <a href="nyfil4 .html">Extra Time</a>
+      <a href="nyfil3.html" class="active">Om oss</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- INTRODUKTION -->
+    <section class="about-hero">
+      <h1>BEHIND THE MIC 🎙️</h1>
+
+      <p>
+        Vilka är vi egentligen?
+        Här får du veta mer om personerna
+        och idéen bakom Heels & Cleats.
+      </p>
+    </section>
+
+    <!-- OM HEELS & CLEATS -->
+    <section class="about-section">
+
+      <div class="about-content">
+        <div class="about-text">
+          <h2>VÅR STORY </h2>
+
+          <p>
+            Heels & Cleats är en fotbollsplattform
+            där passionen för sporten står i centrum.
+          </p>
+
+          <p>
+            Den drivs av Sally Ceesay som är journaliststudent 
+            och Lamin Ceesay som är co-host för pooden.
+            Genom vår podcast och sociala medier
+            delar vi tankar, känslor och diskussioner
+            om allt som händer i fotbollsvärlden.
+          </p>
+
+          <p>
+            Vi vill skapa en plats där fotbollsfans
+            kan diskutera, inspireras och dela
+            sitt intresse för sporten.
+          </p>
+        </div>
+
+        <div class="about-image">
+          <img src="IMG_8932.jpeg" alt="Heels & Cleats">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TEAMET -->
+    <section class="team-section">
+
+      <h2>MEET THE TEAM 💗</h2>
+
+      <p class="team-intro">
+        Personerna bakom mikrofonerna!
+      </p>
+
+      <div class="team-grid">
+
+        <div class="team-card">
+          <div class="team-photo"><img src="DSC_3945.JPG" alt="SALLY"></div>
+          <h3>SALLY </h3>
+          <p>Programledare</p>
+        </div>
+
+        <div class="team-card">
+          <div class="team-photo">⚽</div>
+          <h3>LAMIN</h3>
+          <p>Programledare</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- KONTAKT -->
+    <section class="contact-section">
+
+      <h2>LET'S TALK! 🗣️</h2>
+
+      <p>
+        Har du en fråga, ett samarbetsförslag
+        eller något du vill att vi ska ta upp
+        i podden? Hör av dig!
+      </p>
+
+      <div class="contact-container">
+
+        <!-- KONTAKTUPPGIFTER -->
+        <div class="contact-info">
+
+          <h3>HITTA OSS</h3>
+
+          <p>📧 E-post</p>
+          <a href="mailto:sally.ceesay16@gmail.com">
+            heelsocleats@gmail.com
+          </a>
+
+          <p>📱 TikTok</p>
+          <a href="https://www.tiktok.com/@heelsocleatspodden?is_from_webapp=1&sender_device=pc"
+             target="_blank"
+             rel="noopener noreferrer">
+            Besök vår TikTok
+          </a>
+
+          <p>📸 Instagram</p>
+          <a href="https://www.instagram.com/heelsocleatspodden/" 
+             target="_blank"
+             rel="noopener noreferrer">
+            Följ oss på Instagram
+          </a>
+
+        </div>
+
+        <!-- KONTAKTFORMULÄR -->
+        <div class="contact-form">
+
+          <h3>SKICKA ETT MEDDELANDE</h3>
+
+          <form id="contactForm">
+
+            <label for="name">Ditt namn</label>
+            <input type="text"
+                   id="name"
+                   name="name"
+                   placeholder="Skriv ditt namn"
+                   required>
+
+            <label for="email">Din e-post</label>
+            <input type="email"
+                   id="email"
+                   name="email"
+                   placeholder="namn@example.com"
+                   required>
+
+            <label for="message">Ditt meddelande</label>
+            <textarea id="message"
+                      name="message"
+                      rows="5"
+                      placeholder="Skriv ditt meddelande..."
+                      required></textarea>
+
+            <button type="submit" class="button">
+              Skicka meddelande ⚽️
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Heels & Cleats</p>
+    <p>Fotboll från vårt perspektiv.</p>
+  </footer>
+
+  <script>
+    document.getElementById("contactForm")
+      .addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+
+        const subject = encodeURIComponent(
+          "Kontakt från " + name
+        );
+
+        const body = encodeURIComponent(
+          "Namn: " + name +
+          "\nE-post: " + email +
+          "\n\nMeddelande:\n" + message
+        );
+
+        window.location.href =
+          "mailto:dinmail@example.com?subject=" +
+          subject + "&body=" + body;
+      });
+  </script>
+  
+</body>
+</html>

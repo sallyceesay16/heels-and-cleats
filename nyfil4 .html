@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <!-- NAVIGATION -->
+  <header>
+    <div class="logo">
+      <img src="IMG_8932.jpeg" alt="Heels & Cleats logga">
+      <h2>HEELS &<br>CLEATS</h2>
+    </div>
+
+    <nav>
+      <a href="nyfil.html">Hem</a>
+      <a href="nyfil2.html">Podden</a>
+      <a href="nyfil4 .html" class="active">Extra Time</a>
+      <a href="nyfil3.html">Om oss</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- INTRODUKTION -->
+    <section class="extra-hero">
+      <p class="extra-label">HEELS & CLEATS</p>
+
+      <h1>EXTRA TIME ⚽</h1>
+
+      <p>
+       Fotbollssnacket tar aldrig slut! <br> 
+        Testa dina kunskaper, rösta i heta
+        frågor och gör din röst hörd.
+      </p>
+
+      <a href="#quiz" class="button">
+        Testa dina fotbollskunskaper
+      </a>
+    </section>
+
+    <!-- FOTBOLLSQUIZ -->
+    <section class="extra-section" id="quiz">
+
+      <h2>⚽ FOOTBALL QUIZ</h2>
+
+      <p class="section-description">
+        Hur bra koll har du egentligen på fotboll?
+        Svara på frågorna och se ditt resultat!
+      </p>
+
+      <div class="quiz-box">
+
+        <p id="question-number">Fråga 1 av 5</p>
+
+        <h3 id="quiz-question"></h3>
+
+        <div id="quiz-options"></div>
+
+        <p id="quiz-feedback" aria-live="polite"></p>
+
+        <button id="next-question"
+                class="button"
+                style="display: none;">
+          Nästa fråga →
+        </button>
+
+        <div id="quiz-result"
+             style="display: none;">
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- OMROSTNING -->
+    <section class="extra-section poll-section">
+
+      <h2>🔥 THE BIG DEBATE</h2>
+
+      <p class="section-description">
+        Vi vill veta vad DU tycker!
+      </p>
+
+      <div class="poll-box">
+
+        <span class="poll-tag">VECKANS FRÅGA</span>
+
+        <h3>
+          Vem är tidernas bästa fotbollsspelare?
+        </h3>
+
+        <div class="poll-options">
+
+          <button onclick="vote('Messi')">
+            Lionel Messi
+          </button>
+
+          <button onclick="vote('Ronaldo')">
+            Cristiano Ronaldo
+          </button>
+
+          <button onclick="vote('Pele')">
+            Pelé
+          </button>
+
+          <button onclick="vote('Maradona')">
+            Diego Maradona
+          </button>
+
+        </div>
+
+        <div id="poll-result"
+             aria-live="polite"></div>
+
+      </div>
+
+    </section>
+
+    <!-- SKICKA IN FRAGOR -->
+    <section class="extra-section">
+
+      <h2>💌 YOUR VOICE MATTERS</h2>
+
+      <p class="section-description">
+        Har du en fråga, en het åsikt
+        eller ett ämne du vill att vi
+        ska diskutera i podden?
+      </p>
+
+      <div class="suggestion-box">
+
+        <h3>TYCK TILL!</h3>
+
+        <form id="suggestion-form">
+
+          <label for="topic">
+            Vad vill du att vi ska prata om?
+          </label>
+
+          <textarea
+            id="topic"
+            rows="5"
+            placeholder="Skriv ditt förslag här..."
+            required></textarea>
+
+          <button type="submit" class="button">
+            Skicka ditt förslag 💗
+          </button>
+
+        </form>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Heels & Cleats</p>
+    <p>Fotboll från vårt perspektiv.</p>
+  </footer>
+
+  <script src="quiz.js"></script>
+
+</body>
+</html>
