@@ -12,7 +12,8 @@ body {
   color: #35001d;
 }
 
-/* HEADER */
+/* HEADER = vad som visas på toppen av hemsidan, där jag har logga, titel och
+rubriker*/
 
 header {
   background: #f6f5f3;
@@ -66,7 +67,8 @@ nav a.active {
   color: white;
 }
 
-/* HERO */
+/* HERO= class namnet allt på första sidan har fått. Texten (färg, storlekt, font osv
+, bilderna dess (storlek och placering)*/
 
 .hero {
   min-height: 480px;
@@ -98,7 +100,7 @@ nav a.active {
   line-height: 1.05;
   color: #990044;
 }
-
+/* UNDERSTRYKNING UNDER H1 */
 .underline {
   width: 150px;
   height: 5px;
@@ -114,7 +116,7 @@ nav a.active {
   max-width: 400px;
 }
 
-/* KNAPP */
+/* för alla knappar man kan trycka på t.ex "podden" eller "testa dina kunskaper" */
 
 .button {
   display: inline-block;
@@ -220,7 +222,7 @@ footer p {
   .hero p {
     font-size: 17px;
   }
-}* PODDSIDAN */
+}/* PODDSIDAN */
 
 .podcast-hero {
   background: linear-gradient(135deg, #ffd6e9, #fff2f8);
@@ -860,11 +862,11 @@ footer p {
     display:flex;
     gap:20px;
 }
-.tt-videos iframe {
-    width: 325px;
-    height: 580px ;
-    border:none;
-    flex-shrink:0;
+.tt-videos img {
+    width: 140px;
+    height: 240px ;
+    border-radius:15px;
+    object-fit:cover;
 }
 .planbild        {
   width: 400px;
@@ -879,10 +881,64 @@ footer p {
 }
 
 .bilder img {
-  width: 100%;
-  height: auto;
   width: 300px;
   height: 200px;
   object-fit: cover;
   margin-top: 20px;
+}
+/* MOBILANPASSNING */
+@media screen and (max-width: 768px) {
+
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  img, video, iframe {
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 36px;
+    overflow-wrap: break-word;
+  }
+
+  h2 {
+    font-size: 28px;
+    overflow-wrap: break-word;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-wrap: break-word;
+  }
+
+  section {
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+}
+@media screen and (max-width: 768px) {
+
+  .podcast-hero h1 {
+    font-size: 32px;
+    transform: none;
+    text-align: center;
+    margin: 20px auto;
+    padding: 0 10px;
+    max-width: 100%;
+  }
+
+  .podcast-hero p {
+    max-width: 100%;
+    margin: 20px auto;
+    font-size: 16px;
+    text-align: center;
+    transform: none;
+  }
+
 }
